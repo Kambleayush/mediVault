@@ -77,14 +77,15 @@
                 app:cornerRadius="20dp" />
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/registerButton"
+                android:id="@+id/registerButton1"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:text="Register"
                 android:textSize="18sp"
                 android:layout_marginTop="20dp"
                 android:backgroundTint="@color/teal_700"
-                app:cornerRadius="20dp" />
+                app:cornerRadius="20dp"
+                tools:ignore="HardcodedText" />
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "95517881296",
+    "project_id": "medivault-9cb98",
+    "storage_bucket": "medivault-9cb98.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:95517881296:android:9ae41c75b9e633eb8a7fd5",
+        "android_client_info": {
+          "package_name": "com.example.medivault"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD4bqrbNYtAVaDbLbOhzAdkvrXP5FI875s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

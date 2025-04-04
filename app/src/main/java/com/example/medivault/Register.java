@@ -1,5 +1,6 @@
 package com.example.medivault;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Spannable;
@@ -27,7 +28,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-public class register extends AppCompatActivity {
+public class Register extends AppCompatActivity {
     public TextView loginText;
 
     EditText full_name,email,username,phone_no,pass;
@@ -47,6 +48,7 @@ public class register extends AppCompatActivity {
         }
     }
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -75,12 +77,12 @@ public class register extends AppCompatActivity {
                 Pass = String.valueOf(pass.getText());
 
                 if(TextUtils.isEmpty(Email)){
-                    Toast.makeText(register.this, "Enter Email", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Register.this, "Enter Email", Toast.LENGTH_SHORT).show();
                     return;
                 }
 
                 if(TextUtils.isEmpty(Pass)){
-                    Toast.makeText(register.this, "Enter Password", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Register.this, "Enter Password", Toast.LENGTH_SHORT).show();
                     return;
                 }
 
@@ -90,14 +92,14 @@ public class register extends AppCompatActivity {
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if (task.isSuccessful()) {
 
-                                    Toast.makeText(register.this, "Account Created", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(Register.this, "Account Created", Toast.LENGTH_SHORT).show();
                                     Intent intent = new Intent(getApplicationContext(),MainActivity.class);
                                     startActivity(intent);
                                     finish();
                                 } else {
                                     // If sign in fails, display a message to the user.
 
-                                    Toast.makeText(register.this, "Authentication failed.", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(Register.this, "Authentication failed.", Toast.LENGTH_SHORT).show();
 
                                 }
                             }
@@ -120,7 +122,7 @@ public class register extends AppCompatActivity {
         loginText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(register.this,MainActivity.class);
+                Intent intent = new Intent(Register.this,MainActivity.class);
                 startActivity(intent);
             }
         });
