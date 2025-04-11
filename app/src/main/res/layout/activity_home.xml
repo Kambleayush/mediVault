@@ -89,10 +89,10 @@
             android:gravity="center_horizontal">
 
             <Button
-                android:id="@+id/record"
+                android:id="@+id/add_record"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:text="Record"
+                android:text="Add Record"
                 android:layout_marginBottom="12dp" />
 
             <Button

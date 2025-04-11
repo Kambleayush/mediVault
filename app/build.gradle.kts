@@ -1,8 +1,9 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.google.gms.google.services)
-
 }
+
+apply(plugin = "com.google.gms.google-services")
 
 android {
     namespace = "com.example.medivault"
@@ -31,10 +32,13 @@ android {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
+    buildFeatures {
+        viewBinding = true
+    }
 }
 
 dependencies {
-
+    implementation("com.google.firebase:firebase-auth:23.2.0")
     implementation(platform("com.google.firebase:firebase-bom:33.12.0"))
     implementation(libs.appcompat)
     implementation(libs.material)
@@ -42,6 +46,8 @@ dependencies {
     implementation(libs.constraintlayout)
     implementation(libs.firebase.auth)
     implementation(libs.firebase.database)
+    implementation(libs.navigation.fragment)
+    implementation(libs.navigation.ui)
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
