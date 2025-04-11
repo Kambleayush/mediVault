@@ -55,18 +55,10 @@ public class AddRecord extends AppCompatActivity {
 
     private void openCamera() {
         Intent cameraIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-        if (cameraIntent.resolveActivity(getPackageManager()) != null) {
-            File photoFile;
-            try {
-                photoFile = createImageFile();
-                photoUri = FileProvider.getUriForFile(this,
-                        getApplicationContext().getPackageName() + ".fileprovider", photoFile);
-                cameraIntent.putExtra(MediaStore.EXTRA_OUTPUT, photoUri);
-                startActivityForResult(cameraIntent, REQUEST_IMAGE_CAPTURE);
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
+
+        startActivityForResult(cameraIntent, REQUEST_IMAGE_CAPTURE);
+
+
     }
 
     private File createImageFile() throws IOException {

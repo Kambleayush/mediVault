@@ -75,14 +75,14 @@
         android:id="@+id/btn_camera"
         android:layout_width="60dp"
         android:layout_height="60dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
-        android:layout_marginStart="22dp"
-        android:contentDescription="Capture Prescription"
         android:backgroundTint="@android:color/darker_gray"
+        android:contentDescription="Capture Prescription"
         android:scaleType="centerInside"
         android:src="@drawable/baseline_camera_alt_24"
-        app:layout_constraintTop_toBottomOf="@id/addDiscription"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/addDiscription" />
 
     <TextView
         android:id="@+id/txt_upload_pic"
@@ -95,6 +95,8 @@
         android:textSize="16sp"
         app:layout_constraintTop_toTopOf="@id/btn_camera"
         app:layout_constraintStart_toEndOf="@id/btn_camera" />
+
+
 
     <Button
         android:id="@+id/btn_upload1"
