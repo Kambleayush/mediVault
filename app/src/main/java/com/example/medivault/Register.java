@@ -31,7 +31,7 @@ import com.google.firebase.auth.FirebaseUser;
 public class Register extends AppCompatActivity {
     public TextView loginText;
 
-    EditText full_name,email,username,phone_no,pass;
+    EditText full_name,email,phone_no,pass;
     Button buttonReg;
     ProgressBar Progress_Bar;
     FirebaseAuth mAuth;
@@ -60,7 +60,6 @@ public class Register extends AppCompatActivity {
         loginText = findViewById(R.id.loginText);
         full_name = findViewById(R.id.fullName);
         email = findViewById(R.id.email);
-        username = findViewById(R.id.username);
         phone_no = findViewById(R.id.phoneNumber);
         pass = findViewById(R.id.password);
         buttonReg = findViewById(R.id.registerButton);
@@ -71,9 +70,8 @@ public class Register extends AppCompatActivity {
             public void onClick(View view) {
 
                 String Fullname,Email,Username,Pass;
-                Fullname = String.valueOf(full_name.getText());
+               // Fullname = String.valueOf(full_name.getText());
                 Email = String.valueOf(email.getText());
-                Username = String.valueOf(username.getText());
                 Pass = String.valueOf(pass.getText());
 
                 if(TextUtils.isEmpty(Email)){
@@ -86,24 +84,21 @@ public class Register extends AppCompatActivity {
                     return;
                 }
 
-                mAuth.signInWithEmailAndPassword(Email, Pass)
-                        .addOnCompleteListener( new OnCompleteListener<AuthResult>() {
+                mAuth.createUserWithEmailAndPassword(Email, Pass)
+                        .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if (task.isSuccessful()) {
-
                                     Toast.makeText(Register.this, "Account Created", Toast.LENGTH_SHORT).show();
-                                    Intent intent = new Intent(getApplicationContext(),MainActivity.class);
+                                    Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                                     startActivity(intent);
                                     finish();
                                 } else {
-                                    // If sign in fails, display a message to the user.
-
-                                    Toast.makeText(Register.this, "Authentication failed.", Toast.LENGTH_SHORT).show();
-
+                                    Toast.makeText(Register.this, "Authentication failed: " + task.getException().getMessage(), Toast.LENGTH_LONG).show();
                                 }
                             }
                         });
+
             }
         });
 

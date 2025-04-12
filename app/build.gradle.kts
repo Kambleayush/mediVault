@@ -1,8 +1,9 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.google.gms.google.services)
-
 }
+
+apply(plugin = "com.google.gms.google-services")
 
 android {
     namespace = "com.example.medivault"
@@ -34,7 +35,8 @@ android {
 }
 
 dependencies {
-
+    implementation("com.google.firebase:firebase-database:21.0.0")
+    implementation("com.google.firebase:firebase-auth:23.2.0")
     implementation(platform("com.google.firebase:firebase-bom:33.12.0"))
     implementation(libs.appcompat)
     implementation(libs.material)

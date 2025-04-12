@@ -60,12 +60,6 @@
                 android:textColor="@color/black"
                 android:layout_marginTop="20dp" />
 
-            <ProgressBar
-                android:id="@+id/progressBar"
-                android:visibility="gone"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/loginButton"
                 android:layout_width="match_parent"
@@ -77,7 +71,7 @@
                 app:cornerRadius="20dp" />
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/registerButton1"
+                android:id="@+id/registerButton"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:text="Register"
@@ -89,5 +83,16 @@
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>
+
+    <!-- Centered ProgressBar -->
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

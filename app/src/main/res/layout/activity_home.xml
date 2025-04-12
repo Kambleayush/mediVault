@@ -65,14 +65,14 @@
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
 
-    <!-- Button Card below Profile Card -->
+    <!-- Button Card with all action buttons -->
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/buttonCard"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         app:cardCornerRadius="16dp"
         app:cardElevation="8dp"
         app:strokeWidth="2dp"
@@ -89,10 +89,10 @@
             android:gravity="center_horizontal">
 
             <Button
-                android:id="@+id/record"
+                android:id="@+id/addrecord"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:text="Record"
+                android:text="Add Record"
                 android:layout_marginBottom="12dp" />
 
             <Button
@@ -106,7 +106,16 @@
                 android:id="@+id/pdf_convert"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:text="Convert to PDF" />
+                android:text="Convert to PDF"
+                android:layout_marginBottom="12dp" />
+
+            <Button
+                android:id="@+id/backlogin"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="Back to Login"
+                android:textColor="@android:color/white"
+                android:backgroundTint="#D32F2F" />
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
 
