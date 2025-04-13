@@ -25,7 +25,7 @@ public class Home extends AppCompatActivity {
 
         // Initialize buttons
         backlogin = findViewById(R.id.backlogin);
-        addRecord = findViewById(R.id.addrecord);
+        addRecord = findViewById(R.id.add_record);
 
         // Check if the user is logged in
         if (FirebaseAuth.getInstance().getCurrentUser() == null) {
@@ -37,7 +37,7 @@ public class Home extends AppCompatActivity {
 
         // Set click listener for Add Record button
         addRecord.setOnClickListener(v -> {
-            Intent intent = new Intent(Home.this, add_record.class);
+            Intent intent = new Intent(Home.this, AddRecord.class);
             startActivity(intent);
         });
 
