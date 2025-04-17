@@ -97,7 +97,7 @@ public class Register extends AppCompatActivity {
                                     String uid = firebaseUser.getUid();
 
                                     // Save data to Realtime Database
-                                    DatabaseReference ref = FirebaseDatabase.getInstance().getReference().child("patent");
+                                    DatabaseReference ref = FirebaseDatabase.getInstance().getReference().child("patient");
                                     Map<String, Object> map = new HashMap<>();
                                     map.put("Full Name", Fullname);
                                     map.put("Email", Email);
