@@ -113,7 +113,7 @@
                 android:id="@+id/backlogin"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:text="Back to Login"
+                android:text="LogOut"
                 android:textColor="@android:color/white"
                 android:backgroundTint="#D32F2F" />
         </LinearLayout>
